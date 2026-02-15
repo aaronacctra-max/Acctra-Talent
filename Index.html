@@ -1,7 +1,374 @@
-echo "# Acctra-Talent" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/aaronacctra-max/Acctra-Talent.git
-git push -u origin main
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acctra Talent | Recruitment & Talent Solutions in Ireland</title>
+<meta name="description" content="Dublin-based recruitment agency connecting top talent with great companies across Ireland. Permanent, contract, executive search, and talent advisory services.">
+<style>
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f9fafb;
+  color: #111827;
+  line-height: 1.6;
+  background-image: url('acctra-talent-logo.jpeg'), /* ← CHANGE TO YOUR LOGO FILE */
+                    linear-gradient(rgba(249, 250, 251, 0.92), rgba(249, 250, 251, 0.92));
+  background-size: 60% auto, cover;
+  background-position: center center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed, fixed;
+  min-height: 100vh;
+}
+header {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 20px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img { height: 70px; }
+nav a {
+  color: #111827;
+  text-decoration: none;
+  margin-left: 32px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.25s ease;
+}
+nav a:hover { color: #4f46e5; }
+.hero {
+  padding: 140px 5% 100px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 0 0 2rem 2rem;
+  margin: 0 5%;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  color: #111827;
+}
+.hero p {
+  font-size: 1.375rem;
+  color: #4b5563;
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+}
+.button {
+  display: inline-block;
+  padding: 16px 40px;
+  background: #4f46e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 9999px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.2);
+  transition: all 0.3s ease;
+  margin: 0 12px 12px;
+}
+.button:hover {
+  background: #4338ca;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(79, 70, 229, 0.3);
+}
+.services, .pricing-section, .contact {
+  padding: 100px 5%;
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 1.5rem;
+  margin: 2rem 5%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+.services h2, .pricing-section h2, .contact h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+.services-subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.service-item {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: left;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.04);
+}
+.service-item:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+.service-item::before {
+  content: "✓";
+  color: #4f46e5;
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+.comparison-table {
+  max-width: 1100px;
+  margin: auto;
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+}
+.comparison-table th, .comparison-table td {
+  padding: 1.5rem 2rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+.comparison-table th {
+  background: #111827;
+  color: white;
+  font-weight: 700;
+}
+.comparison-table td strong {
+  color: #4f46e5;
+}
+.form-container {
+  max-width: 600px;
+  margin: 3rem auto 0;
+  text-align: left;
+}
+.form-container label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+  color: #374151;
+}
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: #f9fafb;
+}
+.form-container textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.form-container button {
+  margin-top: 1.5rem;
+  padding: 0.875rem 2rem;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.form-container button:hover {
+  background: #4338ca;
+  transform: translateY(-3px);
+}
+footer {
+  background: #111827;
+  color: #d1d5db;
+  text-align: center;
+  padding: 3rem 5%;
+  font-size: 1rem;
+}
+
+/* Mobile-friendly improvements */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px 5%;
+    text-align: center;
+  }
+  nav {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav a {
+    margin: 8px 12px;
+    font-size: 1rem;
+  }
+  .hero {
+    padding: 100px 5% 60px;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.125rem;
+  }
+  .services, .pricing-section, .contact {
+    padding: 60px 5%;
+    margin: 1rem 3%;
+  }
+  .services-grid {
+    gap: 1.5rem;
+  }
+  .service-item {
+    padding: 1.5rem;
+  }
+  .button {
+    padding: 14px 30px;
+    font-size: 1rem;
+    margin: 8px 8px;
+  }
+  .comparison-table th, .comparison-table td {
+    padding: 1rem 1.2rem;
+    font-size: 0.95rem;
+  }
+  footer {
+    padding: 2rem 5%;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  nav a {
+    margin: 6px 10px;
+    font-size: 0.95rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="acctra-talent-logo.jpeg" alt="Acctra Talent Logo" loading="lazy">
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Packages</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Connecting Top Talent with Great Companies</h1>
+  <p>Dublin-based recruitment specialists delivering permanent, contract, executive search, and talent solutions across Ireland.</p>
+  <a href="#contact" class="button">Find Talent or Your Next Role</a>
+</section>
+
+<section class="services" id="services">
+  <h2>Our Recruitment Services</h2>
+  <p class="services-subtitle">We match exceptional candidates with forward-thinking businesses — fast, accurately, and with care.</p>
+  <div class="services-grid">
+    <div class="service-item">Permanent Recruitment</div>
+    <div class="service-item">Contract & Interim Staffing</div>
+    <div class="service-item">Executive & Leadership Search</div>
+    <div class="service-item">Talent Pipeline Building</div>
+    <div class="service-item">Employer Branding Support</div>
+    <div class="service-item">Candidate Assessment & Screening</div>
+    <div class="service-item">Market Mapping & Headhunting</div>
+    <div class="service-item">Diversity & Inclusion Recruitment</div>
+    <div class="service-item">Career Coaching & Outplacement</div>
+    <div class="service-item">HR Advisory & Talent Strategy</div>
+  </div>
+</section>
+
+<section class="pricing-section" id="pricing">
+  <h2>Our Recruitment Packages</h2>
+  <table class="comparison-table">
+    <tr>
+      <th>Feature</th>
+      <th>Standard Recruitment</th>
+      <th>Premium Talent Solutions</th>
+    </tr>
+    <tr>
+      <td>Role Type</td>
+      <td>Permanent & contract mid-level roles</td>
+      <td>Executive, leadership & specialist positions</td>
+    </tr>
+    <tr>
+      <td>Candidate Sourcing</td>
+      <td>Database + job boards + networks</td>
+      <td>Headhunting + market mapping + exclusive search</td>
+    </tr>
+    <tr>
+      <td>Screening & Assessment</td>
+      <td>CV screening + phone interviews</td>
+      <td>Full competency interviews + psychometric testing</td>
+    </tr>
+    <tr>
+      <td>Shortlisting</td>
+      <td>Up to 5 candidates</td>
+      <td>Up to 8 high-calibre candidates</td>
+    </tr>
+    <tr>
+      <td>Employer Branding</td>
+      <td>Basic job advert support</td>
+      <td>Full employer value proposition development</td>
+    </tr>
+    <tr>
+      <td>Guarantee Period</td>
+      <td>3 months replacement guarantee</td>
+      <td>6–12 months replacement guarantee</td>
+    </tr>
+    <tr>
+      <td>Support Level</td>
+      <td>Standard</td>
+      <td><strong>Priority + dedicated consultant</strong></td>
+    </tr>
+  </table>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Get in Touch</h2>
+  <p>Serving clients and candidates across all of Ireland | Based in Dublin</p>
+  <p><a href="mailto:info@acctratalent.com">info@acctratalent.com</a></p>
+
+  <div class="form-container">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="7ed2545b-4e09-4aa8-8474-5f26ad61093f">
+      <input type="checkbox" name="botcheck" style="display: none;" />
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Your name">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+      <label for="message">Tell us about your needs</label>
+      <textarea id="message" name="message" required placeholder="e.g., Looking for a senior finance manager or seeking new opportunities..."></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © 2026 Acctra Talent | Recruitment Across Ireland | Dublin-Based
+</footer>
+</body>
+</html>
