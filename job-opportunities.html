@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Job Opportunities | Acctra Talent</title>
-<meta name="description" content="Explore current job opportunities and career openings with Acctra Talent – recruitment and talent solutions in Ireland.">
+<title>Acctra Talent | Recruitment & Talent Solutions in Ireland</title>
+<meta name="description" content="Dublin-based recruitment agency connecting top talent with leading companies across Ireland. Permanent placement, executive search, talent advisory, and more.">
 <style>
 html { scroll-behavior: smooth; }
 body {
@@ -88,7 +88,7 @@ nav a:hover { color: #1e40af; }
   transform: translateY(-4px);
   box-shadow: 0 15px 35px rgba(30, 64, 175, 0.25);
 }
-.content-section {
+.services {
   padding: 100px 5%;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
@@ -97,37 +97,48 @@ nav a:hover { color: #1e40af; }
   margin: 2rem 5%;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 }
-.content-section h2 {
+.services h2 {
   font-size: 3rem;
   font-weight: 800;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #111827;
   text-align: center;
 }
-.job-card {
+.services-subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.service-item {
   background: white;
   border: 1px solid rgba(229, 231, 235, 0.5);
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.04);
+  text-align: left;
   transition: all 0.35s ease;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.04);
 }
-.job-card:hover {
-  transform: translateY(-8px);
+.service-item:hover {
+  transform: translateY(-12px);
   box-shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
-.job-card h3 {
-  font-size: 1.75rem;
+.service-item::before {
+  content: "✓";
   color: #1e40af;
-  margin-bottom: 0.75rem;
-}
-.job-card p, .job-card ul {
-  margin: 0.75rem 0;
-  color: #4b5563;
-}
-.job-card ul {
-  padding-left: 1.5rem;
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+  font-weight: bold;
 }
 .form-container {
   max-width: 600px;
@@ -180,7 +191,7 @@ footer {
   font-size: 1rem;
 }
 
-/* Mobile adjustments */
+/* Mobile-friendly improvements */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -205,16 +216,20 @@ footer {
   .hero p {
     font-size: 1.125rem;
   }
-  .content-section {
+  .services {
     padding: 60px 5%;
     margin: 1rem 3%;
   }
-  .job-card {
+  .services-grid {
+    gap: 1.5rem;
+  }
+  .service-item {
     padding: 1.5rem;
   }
   .button {
     padding: 14px 30px;
     font-size: 1rem;
+    margin: 8px 8px;
   }
   footer {
     padding: 2rem 5%;
@@ -241,51 +256,34 @@ footer {
 <header>
   <img src="IMG_9857.jpeg" alt="Acctra Talent Logo" loading="lazy">
   <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#services">Services</a>
-    <a href="index.html#contact">Contact</a>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
     <a href="jobs.html">We're Hiring</a>
-    <a href="job-opportunities.html" class="active">Job Opportunities</a>
+    <a href="job-opportunities.html">Job Opportunities</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h1>Job Opportunities</h1>
-  <p>Discover exciting roles across Ireland with top employers. We partner with leading companies to bring you permanent, contract, and executive opportunities in finance, tech, professional services, and more.</p>
-  <a href="#contact" class="button">Get in Touch – Find Your Next Role</a>
+  <h1>Connecting Top Talent with Great Companies</h1>
+  <p>Dublin-based recruitment specialists helping businesses find exceptional people — and helping professionals find their next opportunity across Ireland.</p>
+  <a href="#contact" class="button">Hire Talent or Find Your Next Role</a>
 </section>
 
-<section class="content-section">
-  <h2>Featured Opportunities</h2>
-
-  <div class="job-card">
-    <h3>Senior Finance Manager</h3>
-    <p><strong>Location:</strong> Dublin</p>
-    <p><strong>Salary range:</strong> €90,000 – €120,000 + bonus</p>
-    <p><strong>Key responsibilities:</strong> Lead financial planning, reporting, and compliance for a growing tech scale-up. Manage team of 5 accountants.</p>
-    <p><strong>Requirements:</strong> ACA/ACCA qualified, 7+ years post-qualification experience, strong commercial acumen.</p>
+<section class="services" id="services">
+  <h2>Our Recruitment Services</h2>
+  <p class="services-subtitle">We deliver precise, fast, and human-centered recruitment solutions for companies and candidates nationwide.</p>
+  <div class="services-grid">
+    <div class="service-item">Permanent Recruitment</div>
+    <div class="service-item">Executive & Leadership Search</div>
+    <div class="service-item">Talent Pipeline Building</div>
+    <div class="service-item">Employer Branding & EVP Development</div>
+    <div class="service-item">Candidate Assessment & Psychometrics</div>
+    <div class="service-item">Market Mapping & Headhunting</div>
+    <div class="service-item">Diversity, Equity & Inclusion Recruitment</div>
+    <div class="service-item">Career Coaching & Outplacement Support</div>
+    <div class="service-item">HR Advisory & Talent Strategy Consulting</div>
   </div>
-
-  <div class="job-card">
-    <h3>Head of Talent Acquisition – Tech</h3>
-    <p><strong>Location:</strong> Dublin (hybrid)</p>
-    <p><strong>Salary range:</strong> €110,000 – €140,000 + equity</p>
-    <p><strong>Key responsibilities:</strong> Build and lead talent acquisition strategy for fast-growing SaaS company. Manage employer branding and recruitment team.</p>
-    <p><strong>Requirements:</strong> 10+ years in talent acquisition, proven track record in tech hiring, experience with executive search.</p>
-  </div>
-
-  <div class="job-card">
-    <h3>Tax Advisor – Corporate</h3>
-    <p><strong>Location:</strong> Cork / Remote (Ireland)</p>
-    <p><strong>Salary range:</strong> €70,000 – €95,000</p>
-    <p><strong>Key responsibilities:</strong> Provide corporate tax advice, compliance, and planning for multinational clients.</p>
-    <p><strong>Requirements:</strong> AITI qualified or equivalent, 4+ years in corporate tax, strong client-facing skills.</p>
-  </div>
-
-  <p style="text-align: center; margin-top: 3rem; font-size: 1.25rem; color: #334155;">
-    See more roles or discuss your career goals? <br>
-    <a href="#contact" class="button" style="font-size: 1.1rem; padding: 14px 32px;">Contact Us Today</a>
-  </p>
 </section>
 
 <section class="contact" id="contact">
@@ -304,8 +302,8 @@ footer {
       <label for="email">Email Address</label>
       <input type="email" id="email" name="email" required placeholder="your.email@example.com">
 
-      <label for="message">Tell us about the role you're interested in</label>
-      <textarea id="message" name="message" required placeholder="e.g., Interested in Senior Finance Manager position, or exploring other finance/tech roles..."></textarea>
+      <label for="message">Tell us about your needs</label>
+      <textarea id="message" name="message" required placeholder="e.g., Looking for a senior finance manager or seeking new opportunities..."></textarea>
 
       <button type="submit">Send Message</button>
     </form>
