@@ -81,7 +81,7 @@ nav a:hover { color: #1e40af; }
   transform: translateY(-4px);
   box-shadow: 0 15px 35px rgba(30, 64, 175, 0.25);
 }
-.services, .contact {
+.services {
   padding: 100px 5%;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
@@ -90,11 +90,12 @@ nav a:hover { color: #1e40af; }
   margin: 2rem 5%;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 }
-.services h2, .contact h2 {
+.services h2 {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
   color: #111827;
+  text-align: center;
 }
 .services-subtitle {
   font-size: 1.25rem;
@@ -103,6 +104,7 @@ nav a:hover { color: #1e40af; }
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 .services-grid {
   display: grid;
@@ -133,8 +135,9 @@ nav a:hover { color: #1e40af; }
 }
 .form-container {
   max-width: 600px;
-  margin: 3rem auto 0;
+  margin: 3rem auto 0 !important;
   text-align: left;
+  padding: 0 1rem;
 }
 .form-container label {
   display: block;
@@ -166,6 +169,9 @@ nav a:hover { color: #1e40af; }
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .form-container button:hover {
   background: #1e3a8a;
@@ -275,19 +281,23 @@ footer {
 
 <section class="contact" id="contact">
   <h2>Get in Touch</h2>
-  <p>Serving clients and candidates across all of Ireland | Based in Dublin</p>
-  <p><a href="mailto:info@acctratalent.com">info@acctratalent.com</a></p>
+  <p style="text-align: center; margin-bottom: 1.5rem;">Serving clients and candidates across all of Ireland | Based in Dublin</p>
+  <p style="text-align: center;"><a href="mailto:info@acctratalent.com">info@acctratalent.com</a></p>
 
   <div class="form-container">
     <form action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="7ed2545b-4e09-4aa8-8474-5f26ad61093f">
       <input type="checkbox" name="botcheck" style="display: none;" />
+
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" required placeholder="Your name">
+
       <label for="email">Email Address</label>
       <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+
       <label for="message">Tell us about your needs</label>
       <textarea id="message" name="message" required placeholder="e.g., Looking for a senior finance manager or seeking new opportunities..."></textarea>
+
       <button type="submit">Send Message</button>
     </form>
   </div>
