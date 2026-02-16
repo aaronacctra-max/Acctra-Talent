@@ -19,7 +19,21 @@ body {
   background-position: center center, center;
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed, fixed;
+  background-blend-mode: overlay; /* helps with blending */
   min-height: 100vh;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: inherit;
+  background-image: url('IMG_9857.jpeg');
+  background-size: 50% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(8px); /* BLURRED LOGO WATERMARK */
+  opacity: 0.15; /* subtle fade */
+  z-index: -1;
 }
 header {
   background: rgba(255, 255, 255, 0.92);
@@ -81,7 +95,7 @@ nav a:hover { color: #1e40af; }
   transform: translateY(-4px);
   box-shadow: 0 15px 35px rgba(30, 64, 175, 0.25);
 }
-.services {
+.services, .contact {
   padding: 100px 5%;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
@@ -90,7 +104,7 @@ nav a:hover { color: #1e40af; }
   margin: 2rem 5%;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 }
-.services h2 {
+.services h2, .contact h2 {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
