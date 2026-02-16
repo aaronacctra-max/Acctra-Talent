@@ -13,25 +13,19 @@ body {
   background-color: #ffffff;
   color: #111827;
   line-height: 1.6;
-  background-image: url('IMG_9857.jpeg'),
-                    linear-gradient(rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.97));
-  background-size: 50% auto, cover;
-  background-position: center center, center;
-  background-repeat: no-repeat, no-repeat;
-  background-attachment: fixed, fixed;
   min-height: 100vh;
+  position: relative;
 }
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: inherit;
   background-image: url('IMG_9857.jpeg');
   background-size: 50% auto;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
-  filter: blur(8px); /* blurred watermark */
-  opacity: 0.15; /* subtle */
+  filter: blur(8px); /* BLURRED LOGO WATERMARK – adjust px value if needed */
+  opacity: 0.15; /* subtle fade */
   z-index: -1;
 }
 header {
