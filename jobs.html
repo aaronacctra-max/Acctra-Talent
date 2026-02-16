@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>We're Hiring | Acctra Talent – Join Our Team</title>
+<meta name="description" content="Current job openings at Acctra Talent – recruitment roles in Dublin and across Ireland. Join our growing team in talent acquisition and consulting.">
+<style>
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+header {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 20px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(30, 64, 175, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img { height: 70px; }
+nav a {
+  color: #e2e8f0;
+  text-decoration: none;
+  margin-left: 32px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+nav a:hover { color: #60a5fa; }
+.hero {
+  padding: 140px 5% 100px;
+  text-align: center;
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: 0 0 2rem 2rem;
+  margin: 0 5%;
+  box-shadow: 0 10px 40px rgba(30, 64, 175, 0.2);
+}
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  color: white;
+}
+.hero p {
+  font-size: 1.375rem;
+  color: #cbd5e1;
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+}
+.button {
+  display: inline-block;
+  padding: 16px 40px;
+  background: #1e40af;
+  color: white;
+  text-decoration: none;
+  border-radius: 9999px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(30, 64, 175, 0.4);
+  transition: all 0.3s ease;
+  margin: 0 12px 12px;
+}
+.button:hover {
+  background: #1e3a8a;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(30, 64, 175, 0.6);
+}
+.content-section {
+  padding: 100px 5%;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  margin: 2rem 5%;
+  box-shadow: 0 10px 40px rgba(30, 64, 175, 0.3);
+  border: 1px solid rgba(30, 64, 175, 0.2);
+}
+.content-section h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: white;
+  text-align: center;
+}
+.job-item {
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(30, 64, 175, 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.35s ease;
+}
+.job-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(30, 64, 175, 0.4);
+  border-color: #60a5fa;
+}
+.job-item h3 {
+  font-size: 1.75rem;
+  color: #60a5fa;
+  margin-bottom: 0.75rem;
+}
+.job-item p {
+  margin: 0.5rem 0;
+  color: #cbd5e1;
+}
+.form-container {
+  max-width: 600px;
+  margin: 3rem auto 0;
+  text-align: left;
+}
+.form-container label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(30, 64, 175, 0.4);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: rgba(30, 41, 59, 0.8);
+  color: white;
+}
+.form-container textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.form-container button {
+  margin-top: 1.5rem;
+  padding: 0.875rem 2rem;
+  background: #1e40af;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.form-container button:hover {
+  background: #1e3a8a;
+  transform: translateY(-3px);
+}
+footer {
+  background: #000000;
+  color: #94a3b8;
+  text-align: center;
+  padding: 3rem 5%;
+  font-size: 1rem;
+  border-top: 1px solid rgba(30, 64, 175, 0.2);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px 5%;
+    text-align: center;
+  }
+  nav {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav a {
+    margin: 8px 12px;
+    font-size: 1rem;
+  }
+  .hero {
+    padding: 100px 5% 60px;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero p {
+    font-size: 1.125rem;
+  }
+  .content-section {
+    padding: 60px 5%;
+    margin: 1rem 3%;
+  }
+  .job-item {
+    padding: 1.5rem;
+  }
+  .button {
+    padding: 14px 30px;
+    font-size: 1rem;
+  }
+  footer {
+    padding: 2rem 5%;
+    font-size: 0.9rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="acctra-talent-logo.jpeg" alt="Acctra Talent Logo" loading="lazy">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="jobs.html" class="active">We're Hiring</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>We're Hiring</h1>
+  <p>Join the Acctra Talent team and help connect exceptional people with great opportunities across Ireland. We're growing and always looking for passionate recruiters and talent professionals.</p>
+  <a href="#contact" class="button">Apply Now</a>
+</section>
+
+<section class="content-section">
+  <h2>Current Openings</h2>
+
+  <div class="job-item">
+    <h3>Recruitment Consultant – Permanent Roles</h3>
+    <p><strong>Location:</strong> Dublin (hybrid working available)</p>
+    <p><strong>Role overview:</strong> Manage full 360 recruitment cycles for permanent positions in finance, tech, and professional services. Build and maintain client relationships, source top talent, and deliver exceptional placements.</p>
+    <p><strong>Requirements:</strong> 2+ years recruitment experience, strong network, excellent communication and negotiation skills.</p>
+  </div>
+
+  <div class="job-item">
+    <h3>Executive Search Researcher</h3>
+    <p><strong>Location:</strong> Dublin</p>
+    <p><strong>Role overview:</strong> Conduct in-depth market mapping, identify passive candidates, and support high-profile executive and leadership searches. Work closely with senior consultants on retained assignments.</p>
+    <p><strong>Requirements:</strong> Strong research skills, LinkedIn expertise, attention to detail, ability to work under pressure.</p>
+  </div>
+
+  <div class="job-item">
+    <h3>Talent Coordinator (Entry-Level / Junior)</h3>
+    <p><strong>Location:</strong> Dublin</p>
+    <p><strong>Role overview:</strong> Support the recruitment team with candidate coordination, scheduling interviews, onboarding, and administrative tasks. Ideal entry point into recruitment with growth opportunities.</p>
+    <p><strong>Requirements:</strong> Strong organisational skills, enthusiasm to learn, excellent phone and email communication.</p>
+  </div>
+
+  <p style="text-align: center; margin-top: 3rem; font-size: 1.25rem; color: #cbd5e1;">
+    No suitable role listed? We're always open to exceptional talent — get in touch to discuss opportunities!
+  </p>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Apply or Get in Touch</h2>
+  <p>Serving clients and candidates across all of Ireland | Based in Dublin</p>
+  <p><a href="mailto:info@acctratalent.com">info@acctratalent.com</a></p>
+
+  <div class="form-container">
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="7ed2545b-4e09-4aa8-8474-5f26ad61093f">
+      <input type="checkbox" name="botcheck" style="display: none;" />
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required placeholder="Your name">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+      <label for="message">Tell us about your application or interest</label>
+      <textarea id="message" name="message" required placeholder="e.g., Applying for Recruitment Consultant role, or interested in future opportunities..."></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © 2026 Acctra Talent | Recruitment Across Ireland | Dublin-Based
+</footer>
+</body>
+</html>
